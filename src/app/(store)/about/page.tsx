@@ -44,12 +44,12 @@ const VALUES = [
   },
 ];
 
-const TEAM: { name: string; role: string; photo?: number }[] = [
-  { name: "Name Surname", role: "Founder" },
+const TEAM: { name: string; role: string; photo?: string }[] = [
+  { name: "Bhalinder Deep Singh", role: "Founder and MD" },
   { name: "Name Surname", role: "Catalogue lead" },
   { name: "Name Surname", role: "Nursery partnerships" },
   { name: "Divyam Singhania", role: "Developer" },
-  { name: "Jayant PARIHAR", role: "Developer" },
+  { name: "Jayant PARIHAR", role: "Developer", photo: "/images/72d19d8a-cfbd-4193-9786-2ed266e54f37.png" },
 ];
 
 function initials(name: string) {
@@ -159,7 +159,7 @@ export default function AboutPage() {
               <li key={`${m.role}-${i}`}>
                 <div className="photo-well relative aspect-[4/5] overflow-hidden">
                   {m.photo !== undefined ? (
-                    <Image src={photoUrl(m.photo, 600)} alt={`Portrait of ${m.name}`} fill
+                    <Image src={m.photo} alt={`Portrait of ${m.name}`} fill
                       sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
                   ) : (
                     <span aria-hidden className="absolute inset-0 grid place-items-center font-display text-5xl text-ink-faint">
