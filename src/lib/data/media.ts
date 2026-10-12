@@ -31,6 +31,10 @@ const IDS = [
   "photo-1524758631624-e2822e304c36",
   "photo-1441974231531-c6227db76b6e",
   "photo-1418065460487-3e41a6c84dc5",
+  // About page: sunlit tropical greenhouse (Sindy Süßengut)
+  "photo-1780563902385-00b7ebfd5faa",
+  // About page: greenhouse growing rows (Peter Neumann)
+  "photo-1635880624245-180ad32a7f37",
 ] as const;
 
 export const MEDIA_COUNT = IDS.length;

@@ -107,6 +107,11 @@ export function Footer() {
             <p className="eyebrow mt-8 mb-4 text-ink-invert/45">Partners</p>
             <ul className="space-y-2.5 text-sm text-ink-invert/65">
               <li>
+                <Link href="/about" className="transition-colors hover:text-ink-invert">
+                  About us
+                </Link>
+              </li>
+              <li>
                 <Link href="/partner" className="transition-colors hover:text-ink-invert">
                   Plans &amp; pricing
                 </Link>

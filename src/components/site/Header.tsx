@@ -193,6 +193,14 @@ export function Header() {
               >
                 For Nurseries
               </Link>
+              <Link
+                href="/about"
+                className="nav-link"
+                data-active={isActive("/about")}
+                onMouseEnter={hoverClose}
+              >
+                About
+              </Link>
             </nav>
           </Container>
         </div>
@@ -425,6 +433,7 @@ function MobileDrawer({ open, onClose }: { open: boolean; onClose: () => void })
             {[
               { href: "/plants", label: "All Plants" },
               { href: "/nurseries", label: "Nurseries" },
+              { href: "/about", label: "About" },
               { href: "/partner", label: "List your nursery" },
             ].map((l) => (
               <li key={l.href}>
