@@ -50,6 +50,9 @@ const TEAM: { name: string; role: string; photo?: string }[] = [
   { name: "Name Surname", role: "Nursery partnerships" },
   { name: "Divyam Singhania", role: "Developer", photo: "/images/divyam-singhania.jpeg" },
   { name: "Jayant PARIHAR", role: "Developer", photo: "/images/jayant-parihar.png" },
+  { name: "", role: "Marketing Head", photo: "/images/" },
+  { name: "", role: "Administrator Head", photo: "/images/" },
+  { name: "", role: "Legal advice", photo: "/images/" }, 
 ];
 
 function initials(name: string) {
