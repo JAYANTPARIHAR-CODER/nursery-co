@@ -48,7 +48,7 @@ const TEAM: { name: string; role: string; photo?: string }[] = [
   { name: "Bhalinder Deep Singh", role: "Founder and MD" },
   { name: "Name Surname", role: "Catalogue lead" },
   { name: "Name Surname", role: "Nursery partnerships" },
-  { name: "Divyam Singhania", role: "Developer", photo: "/images/divyam-singhania.jpeg" },
+  { name: "Divyam Singhania", role: "Developer", photo: "/images/divyam-singhania.png" },
   { name: "Jayant PARIHAR", role: "Developer", photo: "/images/72d19d8a-cfbd-4193-9786-2ed266e54f37.png" },
 ];
 
