@@ -28,6 +28,97 @@ export default function PartnerPage() {
 
   return (
     <>
+      {/* --------------------------------------------------------- apply */}
+      <Section tone="paper">
+        <div id="apply" className="scroll-mt-36" />
+        <Container wide>
+          <div className="mx-auto max-w-2xl">
+            <SectionHead
+              align="center"
+              eyebrow="Apply"
+              title="Tell us about your nursery"
+              blurb="We read every application. Expect a reply within two working days."
+            />
+
+            <form className="space-y-5 border border-line bg-surface p-7 sm:p-9">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="Nursery name" htmlFor="p-name">
+                  <Input id="p-name" name="nursery" required placeholder="Green Canopy Nursery" />
+                </Field>
+                <Field label="Your name" htmlFor="p-owner">
+                  <Input id="p-owner" name="owner" required placeholder="Full name" />
+                </Field>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="Phone" htmlFor="p-phone">
+                  <Input id="p-phone" name="phone" type="tel" inputMode="tel" required placeholder="+91" />
+                </Field>
+                <Field label="Email" htmlFor="p-email">
+                  <Input id="p-email" name="email" type="email" required placeholder="you@nursery.in" />
+                </Field>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Field label="City" htmlFor="p-city">
+                  <Select id="p-city" name="city" defaultValue="">
+                    <option value="" disabled>
+                      Choose a city
+                    </option>
+                    {CITIES.map((c) => (
+                      <option key={c} value={c}>
+                        {c}
+                      </option>
+                    ))}
+                    <option value="other">Somewhere else</option>
+                  </Select>
+                </Field>
+                <Field
+                  label="Roughly how many plant types"
+                  htmlFor="p-size"
+                  hint="An estimate is fine."
+                >
+                  <Select id="p-size" name="size" defaultValue="">
+                    <option value="" disabled>
+                      Choose a range
+                    </option>
+                    <option>Under 25</option>
+                    <option>25 – 75</option>
+                    <option>75 – 200</option>
+                    <option>Over 200</option>
+                  </Select>
+                </Field>
+              </div>
+
+              <Field
+                label="What do you specialise in?"
+                htmlFor="p-about"
+                hint="Anything that makes your stock distinctive — rare aroids, field-grown outdoor, bulk supply."
+              >
+                <Textarea id="p-about" name="about" rows={4} />
+              </Field>
+
+              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-5">
+                <p className="flex items-center gap-2 text-xs text-ink-faint">
+                  <Check className="size-3.5 shrink-0 text-leaf" strokeWidth={2} aria-hidden />
+                  30-day trial · no card required
+                </p>
+                <Button type="submit" size="lg">
+                  Submit application
+                </Button>
+              </div>
+            </form>
+
+            <Rule className="mt-12" label="Already a partner" />
+            <p className="mt-6 text-center text-sm text-ink-muted">
+              <a href="/dashboard" className="underline underline-offset-4 hover:text-ink">
+                Sign in to your dashboard
+              </a>{" "}
+              to manage stock and enquiries.
+            </p>
+          </div>
+        </Container>
+      </Section>
       {/* ---------------------------------------------------------- hero */}
       <section className="relative overflow-hidden bg-ink text-ink-invert">
         <div className="absolute inset-0 opacity-25" aria-hidden>
@@ -245,97 +336,7 @@ export default function PartnerPage() {
         </Container>
       </Section>
 
-      {/* --------------------------------------------------------- apply */}
-      <Section tone="paper">
-        <div id="apply" className="scroll-mt-36" />
-        <Container wide>
-          <div className="mx-auto max-w-2xl">
-            <SectionHead
-              align="center"
-              eyebrow="Apply"
-              title="Tell us about your nursery"
-              blurb="We read every application. Expect a reply within two working days."
-            />
-
-            <form className="space-y-5 border border-line bg-surface p-7 sm:p-9">
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="Nursery name" htmlFor="p-name">
-                  <Input id="p-name" name="nursery" required placeholder="Green Canopy Nursery" />
-                </Field>
-                <Field label="Your name" htmlFor="p-owner">
-                  <Input id="p-owner" name="owner" required placeholder="Full name" />
-                </Field>
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="Phone" htmlFor="p-phone">
-                  <Input id="p-phone" name="phone" type="tel" inputMode="tel" required placeholder="+91" />
-                </Field>
-                <Field label="Email" htmlFor="p-email">
-                  <Input id="p-email" name="email" type="email" required placeholder="you@nursery.in" />
-                </Field>
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-2">
-                <Field label="City" htmlFor="p-city">
-                  <Select id="p-city" name="city" defaultValue="">
-                    <option value="" disabled>
-                      Choose a city
-                    </option>
-                    {CITIES.map((c) => (
-                      <option key={c} value={c}>
-                        {c}
-                      </option>
-                    ))}
-                    <option value="other">Somewhere else</option>
-                  </Select>
-                </Field>
-                <Field
-                  label="Roughly how many plant types"
-                  htmlFor="p-size"
-                  hint="An estimate is fine."
-                >
-                  <Select id="p-size" name="size" defaultValue="">
-                    <option value="" disabled>
-                      Choose a range
-                    </option>
-                    <option>Under 25</option>
-                    <option>25 – 75</option>
-                    <option>75 – 200</option>
-                    <option>Over 200</option>
-                  </Select>
-                </Field>
-              </div>
-
-              <Field
-                label="What do you specialise in?"
-                htmlFor="p-about"
-                hint="Anything that makes your stock distinctive — rare aroids, field-grown outdoor, bulk supply."
-              >
-                <Textarea id="p-about" name="about" rows={4} />
-              </Field>
-
-              <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line pt-5">
-                <p className="flex items-center gap-2 text-xs text-ink-faint">
-                  <Check className="size-3.5 shrink-0 text-leaf" strokeWidth={2} aria-hidden />
-                  30-day trial · no card required
-                </p>
-                <Button type="submit" size="lg">
-                  Submit application
-                </Button>
-              </div>
-            </form>
-
-            <Rule className="mt-12" label="Already a partner" />
-            <p className="mt-6 text-center text-sm text-ink-muted">
-              <a href="/dashboard" className="underline underline-offset-4 hover:text-ink">
-                Sign in to your dashboard
-              </a>{" "}
-              to manage stock and enquiries.
-            </p>
-          </div>
-        </Container>
-      </Section>
+      
     </>
   );
 }
