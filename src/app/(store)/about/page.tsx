@@ -45,13 +45,10 @@ const VALUES = [
 ];
 
 const TEAM: { name: string; role: string; photo?: string }[] = [
-  { name: "Bhalinder Deep Singh", role: "Founder and MD" },
-  { name: "Name Surname", role: "Catalogue lead" }, 
-  { name: "Name Surname", role: "Nursery partnerships" },
-  { name: "Divyam Singhania", role: "Developer", photo: "/images/divyam-singhania.jpeg" },
-  { name: "Jayant PARIHAR", role: "Developer", photo: "/images/jayant-parihar.png" },
+  { name: "Bhalinder Deep Singh", role: "Founder and MD", photo: "/images/bhalinder-deep-singh.jpg" },
+  { name: "Divyam Singhania", role: "Founding Engineer", photo: "/images/divyam-singhania.jpeg" },
+  { name: "Jayant PARIHAR", role: "Founding Engineer", photo: "/images/jayant-parihar.png" },
   { name: "", role: "Marketing Head", photo: "/images/" },
-  { name: "", role: "Administrator Head", photo: "/images/" },
   { name: "", role: "Legal advice", photo: "/images/" }, 
 ];
 
